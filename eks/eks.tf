@@ -16,3 +16,7 @@ module "eks" {
   MIN_SIZE           = 2
   CREATE_ALB_INGRESS = true
 }
+
+provider "aws" {
+  region = "us-east-1"
+}
