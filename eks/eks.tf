@@ -9,7 +9,7 @@ module "vpc" {
 module "eks" {
   source             = "github.com/r-devops/tf-module-eks.git"
   ENV                = "prod"
-  PRIVATE_SUBNET_IDS = module.vpc.PRIVATE_SUBNET_IDS
+  PRIVATE_SUBNET_IDS = module.vpc.PRIVATE_SUBNETS_IDS
   PUBLIC_SUBNET_IDS  = module.vpc.PUBLIC_SUBNETS_IDS
   DESIRED_SIZE       = 2
   MAX_SIZE           = 2
