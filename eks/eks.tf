@@ -4,6 +4,7 @@ module "vpc" {
   ENV                = "prod"
   CREATE_INTERNET_GW = true
   CREATE_NAT_GW      = true
+  AZ                 = ["us-east-1a", "us-east-1b"]
 }
 
 module "eks" {
